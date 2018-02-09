@@ -1,9 +1,14 @@
 import React from 'react';
+//import { LoginComponent } from './Login/login';
 import { HashRouter as Router, Route } from 'react-router-dom';
 
+import Dummy from './Login/dummy';
+import LoginComponent from './Login/login';
+
+
 export default class App extends React.Component{
-	constructor(props){
-		super(props);
+	constructor(prop){
+		super(prop);
 		this.state = {
 		}
 	}
@@ -16,29 +21,11 @@ export default class App extends React.Component{
 		return (
 		<Router>
 			<div>
-				<Route exact path="/" component = {Login}/>
-				<Route exact path="/user" component = {User}/>
+				<Route exact path="/" component = {LoginComponent} />
+				<Route exact path="/user" component = {Dummy} />
 			</div>
 		</Router>
 		);
 	}
 }
 
-
-class Login extends React.Component{
-	render(){
-		return(
-		<div>
-			<h1>Login</h1>
-		</div>)
-	}
-}
-
-class User extends React.Component{
-	render(){
-		return(
-		<div>
-			<h1>UserData</h1>
-		</div>)
-	}	
-}

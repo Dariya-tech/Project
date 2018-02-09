@@ -1,7 +1,10 @@
 package io.springBoot.model;
 
-
+import javax.persistence.Entity;
+import javax.persistence.Id;
+@Entity
 public class Employee {
+	@Id 
 	private int Id;
 	private String userName;
 	private String password;
